@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.c1{
+    background-color: burlywood;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic
+};
+</style>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body class="c1">
+    <div >
+        <h1>Digital Clock</h1>
+        <h1 id="clock">3:10:5</h1>
+    </div>
+    <script>
+        let clock=document.getElementById("clock");
+        setInterval(timee,1000);
+
+        function timee(){
+            let d=new Date();
+            let h=d.getHours();
+            let m=d.getMinutes();
+            let s=d.getSeconds();
+            clock.innerHTML=`${h}:${m}:${s}`;
+        }
+        
+    </script>
+</body>
+</html>
